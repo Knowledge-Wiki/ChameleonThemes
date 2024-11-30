@@ -17,8 +17,9 @@
  *
  * @file
  * @ingroup extensions
- * @author thomas-topway-it <support@topway.it>
- * @copyright Copyright ©2024, https://wikisphere.org
+ *
+ * @license GPL-2.0-or-later
+ * @author thomas-topway-it for KM-A
  */
  
 // @credits https://github.com/ProfessionalWiki/chameleon/blob/master/src/Components/PersonalTools.php
