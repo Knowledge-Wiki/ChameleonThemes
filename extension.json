@@ -1,0 +1,61 @@
+{
+	"name": "ChameleonThemes",
+	"author": "thomas-topway-it",
+	"version": "1.0",
+	"url": "https://www.mediawiki.org/wiki/Extension:ChameleonThemes",
+	"descriptionmsg": "kma-chameleon-skin-extension-desc",
+	"license-name": "GPL-2.0-or-later",
+	"requires": {
+		"MediaWiki": ">= 1.35.0"
+	},
+	"MessagesDirs": {
+		"ChameleonThemes": [
+			"i18n"
+		]
+	},
+	"callback": "ChameleonThemesHooks::onRegistration",
+	"AutoloadNamespaces": {
+	},
+	"AutoloadClasses": {
+		"ChameleonThemesHooks": "includes/ChameleonThemesHooks.php",
+		"ChameleonThemes": "includes/ChameleonThemes.php"
+	},
+	"ExtensionMessagesFiles": {
+		"ChameleonThemesAlias": "ChameleonThemes.alias.php",
+		"ChameleonThemesMagic": "ChameleonThemes.i18n.magic.php"
+	},
+	"Hooks": {
+		"BeforeInitialize": "ChameleonThemesHooks::onBeforeInitialize",
+		"ParserFirstCallInit": "ChameleonThemesHooks::onParserFirstCallInit",
+		"BeforePageDisplay": "ChameleonThemesHooks::onBeforePageDisplay"
+	},
+	"ConfigRegistry": {
+	},
+	"SpecialPages": {
+	},
+	"APIModules": {
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "resources",
+		"remoteExtPath": "ChameleonThemes/resources"
+	},
+	"ResourceModules": {
+		"ext.ChameleonThemes": {
+			"position": "top",
+			"scripts": [
+			],
+			"styles": [
+			],
+			"dependencies": [
+			],
+			"messages": [
+			]
+		}
+	},
+	"config": {
+		"ChameleonThemesTheme": {
+			"value": "fina"
+		}
+	},
+	"manifest_version": 2
+}

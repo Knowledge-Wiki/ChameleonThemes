@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<structure xmlns="https://ProfessionalWiki.github.io/chameleon/schema/3.4/layout.rng">
+
+	<component type="NavbarHorizontal">
+		<component type="Menu" message="secondary-menu"/>
+		<component type="SearchBar" position="right" class="order-first order-cmln-0" buttons="go" />
+		<component type="PersonalTools" position="right" hideSelectedNameSpace="yes"/>
+	</component>
+
+	<component type="PageToolsNav" class="nav" hideSelectedNameSpace="no"/>
+	<component type="MainContent"/>
+	<component type="FooterInfo" class="justify-content-right"/>
+	<component type="Footer" message="Footer" />
+
+</structure>
