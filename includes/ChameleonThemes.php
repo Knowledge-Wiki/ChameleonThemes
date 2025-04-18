@@ -66,7 +66,7 @@ class ChameleonThemes {
 			$GLOBALS['egChameleonLayoutFile'] = "$localPath/{$resources['layout']}";
 		}
 
-		if ( !is_array( $GLOBALS[ 'egChameleonExternalStyleModules'] ) ) {
+		if ( !isset( $GLOBALS[ 'egChameleonExternalStyleModules'] ) || !is_array( $GLOBALS[ 'egChameleonExternalStyleModules'] ) ) {
 			$GLOBALS[ 'egChameleonExternalStyleModules'] = [];
 		}
 

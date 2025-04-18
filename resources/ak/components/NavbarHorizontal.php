@@ -43,38 +43,29 @@ class NavbarHorizontal extends Component {
 		$this->getSkin()->getOutput()->addStyle('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
 		$navElements = $this->buildNavBarComponents();
 
-/*
-
-<ul class="nav-list-mobile">
-<li class="icon"><a class="no-symbol page-tools-kma-search" href="#!"></a>'
- . ( $this->getSkin()->getUser()->isRegistered() ? "<li><a class=\"personal-tools-kma-edit\" href=\"#!\"></a></li>" : '' )
-. '<li class="icon"><a class="no-symbol personal-tools-kma-user" href="#!"></a></li>
-</ul>
-*/
 		return '<section class="navigation">
   <div class="nav-container">
-    <div class="nav-brand">
+    <div class="brand">
       ' . $this->getLogo() . '
     </div>
-    <nav class="nav-desktop">
+    <nav class="navigation">
+<ul class="nav-list-mobile">'
+. $navElements['right'][0] 
+. ( $this->getSkin()->getUser()->isRegistered() ? "<li><a class=\"personal-tools-kma-edit\" href=\"#!\"></a></li>" : '' )
+. '<li class="icon"><a class="no-symbol personal-tools-kma-user" href="#!"></a></li>
+</ul>
+      <div class="nav-mobile">
+        <a id="nav-toggle" href="#!"><span></span></a>
+      </div>
       <ul class="nav-list">
 ' . implode( '', $navElements['left'] ) . '
       </ul>
-    </nav>
-    <nav class="nav-right">
-      <ul class="nav-list">
+      <ul class="nav-list right">
 ' . implode( '', $navElements['right'] ) . '
       </ul>
-      <div class="nav-toggle">
-        <a href="#!"><span></span></a>
-      </div>
     </nav>
+<div style="clear:both"></div>
   </div>
-    <nav class="nav-mobile">    
-      <ul class="nav-list">
-' . implode( '', $navElements['left'] ) . '
-      </ul>
-    </nav>
 </section>';
 	}
 
