@@ -48,7 +48,7 @@ class PageToolsNav extends Component {
 				// ***edited
 				// 'div',
 				 'nav',
-				[ 'class' => $this->getClassString() . ' edit justify-content-between' . ( $editing ? ' hide' : '' ) , 'id' => 'p-contentnavigation' ],
+				[ 'class' => $this->getClassString() . ' nav-edit' . ( $editing ? ' hide' : '' ) , 'id' => 'p-contentnavigation' ],
 				implode( $toolGroups ),
 				$this->indent()
 			);
