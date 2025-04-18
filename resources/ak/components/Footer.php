@@ -172,6 +172,9 @@ class Footer extends Component {
 
 		$arr = [];
 		foreach ($toolbox as $key => $linkItem) {
+			if ( !array_key_exists( 'href', $linkItem ) ) {
+				continue;
+			}
 			//$link = $skinTemplate->makeLink( $key, $linkItem);
 			$text =
 				$linkItem['text'] ??
